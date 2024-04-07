@@ -23,4 +23,4 @@ Todos los comandos que puedes usar para correr el proyecto desde la terminal
 **GRACIAS POR VUESTRO APOYO A LA COMUNIDAD DEV**
 
 POKEAPI:
-- 🎮: : [POKEAPI]([https://github.com/midudev/tailwind-animations](https://pokeapi.co/))
+- 🎮 - [POKEAPI]([https://github.com/midudev/tailwind-animations](https://pokeapi.co/))
