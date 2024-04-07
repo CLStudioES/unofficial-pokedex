@@ -1,6 +1,6 @@
 # CLStudio Website 2024
 
->  **BIENVENIDO** Estás en el proyecto web de CLStudio 2024
+>  **BIENVENIDO** al proyecto no official de la Pokédex hecha por fans para fans.
 
 ![THE UNOFFICIAL POKÉDEX](./public/logo.png)
 
