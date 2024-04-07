@@ -1,4 +1,4 @@
-# CLStudio Website 2024
+# THE UNOFFICIAL FAN POKÉDEX
 
 >  **BIENVENIDO** al proyecto no official de la Pokédex hecha por fans para fans.
 
