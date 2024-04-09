@@ -1,0 +1,35 @@
+---
+import { pokemonList } from "../consts/pokemonList";
+---
+
+<section
+    class="container h-auto mx-auto grid grid-cols-1 lg:grid-cols-4
+                md:grid-cols-4 justify-items-center items-center gap-y-14 gap-x-4 my-10"
+>
+    {
+        pokemonList.map(({ id, name, types }) => (
+            <article class="w-56 bg-white shadow-lg rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-200 cursor-pointer">
+                <div class="h-40 w-56 bg-gray-100 rounded-t-lg">
+                    <img
+                        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                        alt="Pokémon"
+                        class="h-40 w-56 mx-auto my-auto object-contain"
+                    />
+                </div>
+                <div class="px-4 py-3 w-72">
+                    <p class="text-gray-400 mr-3 uppercase text-xs">
+                        {`Nº ${id.toString().padStart(4, 0)}`}
+                    </p>
+                    <p class="text-lg font-bold text-black truncate block capitalize mt-4">
+                        {`${name}`}
+                    </p>
+                    <div class="flex items-center">
+                        <p class="text-lg font-semibold text-black cursor-auto uppercase">
+                            {`${types[0].type.name}`}
+                        </p>
+                    </div>
+                </div>
+            </article>
+        ))
+    }
+</section>
