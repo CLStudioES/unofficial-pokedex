@@ -1,0 +1,45 @@
+---
+import { pokemonListG1 } from "../consts/pokemonG1";
+
+const listOfPokemonG1 = pokemonListG1.map((pokemonsG1) => {
+    const { id } = pokemonsG1.id;
+    const { name } = pokemonsG1.name;
+    const { urlImage } = pokemonsG1.sprites.front_default;
+    return { pokemonsG1 };
+});
+---
+
+<section
+    class="container w-full h-auto mx-auto grid grid-cols-1 lg:grid-cols-4
+                md:grid-cols-4 justify-items-center items-center gap-y-14 gap-x-4 my-10"
+>
+    {
+        pokemonListG1.map(({ id, name, urlImage }) => (
+            <article class="w-56 bg-white shadow-lg rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-200 cursor-pointer">
+                <div class="h-40 w-56 bg-gray-100 rounded-t-lg">
+                    <img
+                        src={`Nº ${urlImage}`}
+                        alt="Pokémon"
+                        class="h-40 w-56 mx-auto my-auto object-cover"
+                    />
+                </div>
+                <div class="px-4 py-3 w-72">
+                    <span
+                        class="text-gray-400 mr-3 uppercase text-xs"
+                    >
+                        {`Nº ${id}`}
+                    <span/>
+                    <p class="text-lg font-bold text-black truncate block capitalize mt-4">
+                        {`${name}`}
+                    </p>
+                    <div class="flex items-center">
+                        <p class="text-lg font-semibold text-black cursor-auto mb-3">
+                            Eléctrico
+                        </p>
+                    </div>
+                </div>
+            </article>
+            
+        ))
+    }
+</section>

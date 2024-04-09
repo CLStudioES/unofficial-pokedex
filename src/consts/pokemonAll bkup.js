@@ -1,16 +1,13 @@
-async function getPokemonG1() {
-    let response;
-    let data;
-    let pokemonList = [];
+let response;
+let data;
+let pokemonList = [];
 
-    for (let index = 1; index < 151; index++) {
-        response = await fetch(
-            `https://pokeapi.co/api/v2/pokemon/${index}`,
-        );
-        data = await response.json();
-        pokemonList[index - 1] = data;
-    }
-    return pokemonList;
+for (let index = 1; index < 151; index++) {
+    response = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${index}`,
+    );
+    data = await response.json();
+    pokemonList[index - 1] = data;
 }
 
 async function getPokemonG2() {
