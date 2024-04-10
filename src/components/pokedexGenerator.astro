@@ -3,8 +3,8 @@ import { pokemonList } from "../consts/pokemonList";
 ---
 
 <section
-    class="container h-auto mx-auto grid grid-cols-1 lg:grid-cols-3
-                md:grid-cols-3 justify-items-center items-center gap-y-14 my-10"
+    class="container h-auto mx-auto grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4
+                md:grid-cols-2 gap-y-14 my-10"
 >
     {
         pokemonList.map(({ id, name, types }) => (
@@ -12,7 +12,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "normal" && (
                     <header class="z-10 normal rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -29,7 +29,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "fire" && (
                     <header class="z-10 fire rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -46,7 +46,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "water" && (
                     <header class="z-10 water rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -63,7 +63,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "electric" && (
                     <header class="z-10 electric rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -80,7 +80,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "grass" && (
                     <header class="z-10 grass rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -97,7 +97,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "ice" && (
                     <header class="z-10 ice rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -114,7 +114,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "fighting" && (
                     <header class="z-10 fighting rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -131,7 +131,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "poison" && (
                     <header class="z-10 poison rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -148,7 +148,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "ground" && (
                     <header class="z-10 ground rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -165,7 +165,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "flying" && (
                  <header class="z-10 flying rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -182,7 +182,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "psychic" && (
                     <header class="z-10 psychic rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -199,7 +199,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "bug" && (
                     <header class="z-10 bug rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -216,7 +216,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "rock" && (
                     <header class="z-10 rock rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -233,7 +233,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "ghost" && (
                     <header class="z-10 ghost rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -250,7 +250,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "dragon" && (
                     <header class="z-10 dragon rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -267,7 +267,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "dark" && (
                     <header class="z-10 dark rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -284,7 +284,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "steel" && (
                     <header class="z-10 steel rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -301,7 +301,7 @@ import { pokemonList } from "../consts/pokemonList";
                 {types[0].type.name == "fairy" && (
                     <header class="z-10 fairy rounded-t-2xl">
                             <div class="px-4 py-3 w-72 ">
-                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                                <p class="text-white mr-3 uppercase">{`Nº ${id.toString().padStart(4, 0)}`}</p>
                             </div>
                             <div
                                 style="backdrop-filter: blur(20px);"
@@ -316,10 +316,7 @@ import { pokemonList } from "../consts/pokemonList";
                     </header>
                 )}
                 <div class="px-4 py-3 w-72">
-                    <p class="text-gray-400 mr-3 uppercase text-xs">
-                        {`Nº ${id.toString().padStart(4, 0)}`}
-                    </p>
-                    <p class="text-lg font-bold text-black truncate block capitalize mt-4">
+                    <p class="text-lg font-bold text-black truncate block capitalize mt-2">
                         {`${name}`}
                     </p>
                     <div class="flex items-center">
