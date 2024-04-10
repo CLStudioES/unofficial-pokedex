@@ -323,9 +323,9 @@ import { pokemonList } from "../consts/pokemonList";
                         {`${name}`}
                     </p>
                     <div class="flex items-center">
-                        <a class="text-lg font-semibold text-black cursor-auto uppercase">{`${types[0].type.name}`}</a>
+                        <a class="text-lg font-semibold text-black cursor-auto capitalize">{`${types[0].type.name}`}</a>
                         {types.length > 1 && (
-                            <a class="text-lg font-semibold text-black cursor-auto uppercase ml-2">{`${types[1].type.name}`}</a>
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ml-2">{`${types[1].type.name}`}</a>
                         )}
                     </div>
                 </div>
