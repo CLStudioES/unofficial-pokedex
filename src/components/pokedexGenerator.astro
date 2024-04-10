@@ -2,176 +2,319 @@
 import { pokemonList } from "../consts/pokemonList";
 ---
 
-<!-- <section
+<section
     class="container h-auto mx-auto grid grid-cols-1 lg:grid-cols-3
                 md:grid-cols-3 justify-items-center items-center gap-y-14 my-10"
 >
     {
         pokemonList.map(({ id, name, types }) => (
-            <article class="w-72 bg-white shadow-lg rounded-2xl hover:scale-105 hover:shadow-xl transition-all duration-200 cursor-pointer">
+            <article class="w-72 h-80 rounded-2xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 cursor-pointer flex flex-col">
                 {types[0].type.name == "normal" && (
-                    <div class="h-40 w-72 normal rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 normal rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "fire" && (
-                    <div class="h-40 w-72 fire rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 fire rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "water" && (
-                    <div class="h-40 w-72 water rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 water rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "electric" && (
-                    <div class="h-40 w-72 electric rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 electric rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "grass" && (
-                    <div class="h-40 w-72 grass rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 grass rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "ice" && (
-                    <div class="h-40 w-72 ice rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 ice rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "fighting" && (
-                    <div class="h-40 w-72 fighting rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 fighting rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "poison" && (
-                    <div class="h-40 w-72 poison rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 poison rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "ground" && (
-                    <div class="h-40 w-72 ground rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 ground rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "flying" && (
-                    <div class="h-40 w-72 flying rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                 <header class="z-10 flying rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "psychic" && (
-                    <div class="h-40 w-72 psychic rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 psychic rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "bug" && (
-                    <div class="h-40 w-72 bug rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 bug rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "rock" && (
-                    <div class="h-40 w-72 rock rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 rock rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "ghost" && (
-                    <div class="h-40 w-72 ghost rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 ghost rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "dragon" && (
-                    <div class="h-40 w-72 dragon rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 dragon rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "dark" && (
-                    <div class="h-40 w-72 dark rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 dark rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "steel" && (
-                    <div class="h-40 w-72 steel rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 steel rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
                 {types[0].type.name == "fairy" && (
-                    <div class="h-40 w-72 fairy rounded-t-2xl">
-                        <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
-                            alt="Pokémon"
-                            class="h-40 w-72 mx-auto my-auto object-contain"
-                        />
-                    </div>
+                    <header class="z-10 fairy rounded-t-2xl">
+                            <div class="px-4 py-3 w-72 ">
+                                <p class="text-white mr-3 uppercase">{`Nº 001`}</p>
+                            </div>
+                            <div
+                                style="backdrop-filter: blur(20px);"
+                                class="bg-white bg-clip-padding bg-opacity-40 h-40 w-40 rounded-full mx-auto my-auto border border-gray-200 -mb-8 z-100"
+                            >
+                                <img
+                                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id.toString()}.png`}
+                                    alt="Pokémon"
+                                    class="h-full w-full object-contain"
+                                />
+                            </div>
+                    </header>
                 )}
-
                 <div class="px-4 py-3 w-72">
                     <p class="text-gray-400 mr-3 uppercase text-xs">
                         {`Nº ${id.toString().padStart(4, 0)}`}
@@ -189,62 +332,8 @@ import { pokemonList } from "../consts/pokemonList";
             </article>
         ))
     }
-</section> -->
-<arti
-    class="container h-auto mx-auto grid grid-cols-1 lg:grid-cols-3
-                md:grid-cols-3 justify-items-center items-center gap-y-14 my-10"
->
-    {
-        (
-            <>
-                <article class="w-72 h-80 normal shadow-xl rounded-2xl hover:scale-105 hover:shadow-2xl transition-all duration-200 cursor-pointer flex flex-col">
-                    <header class="z-10">
-                        <div class="bg-white h-40 w-40 rounded-full mx-auto my-auto border border-gray-500 mt-4 -mb-8 z-100">
-                            <img
-                                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png`}
-                                alt="Pokémon"
-                                class="h-full w-full object-contain"
-                            />
-                        </div>
-                    </header>
-                    <body class="z-0">
-                        <div class="px-4 py-3 w-72 rounded-b-2xl h-full bg-white flex flex-col my-auto">
-                            <p class="text-gray-400 mr-3 uppercase text-xs">
-                                {`Nº 001`}
-                            </p>
-                            <p class="text-lg font-bold text-black truncate block capitalize mt-4">
-                                Mew
-                            </p>
-                            <div class="flex items-center">
-                                <a class="text-lg font-semibold text-black cursor-auto uppercase">
-                                    Psíquico
-                                </a>
-                            </div>
-                        </div>
-                    </body>
-                </article>
-            </>
+</section>
 
-            // <div class="h-full w-72 normal rounded-2xl flex flex-col">
-            //             <div class="bg-white h-40 w-40 rounded-full mx-auto my-auto">
-            //                 <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png`} alt="Pokémon" class="h-full w-full object-contain" />
-            //             </div>
-            //             <div class="px-4 py-3 w-72 bg-white mt-4">
-            //                 <p class="text-gray-400 mr-3 uppercase text-xs">
-            //                     {`Nº 001`}
-            //                 </p>
-            //                 <p class="text-lg font-bold text-black truncate block capitalize mt-4">
-            //                     Mew
-            //                 </p>
-            //                 <div class="flex items-center">
-            //                     <a class="text-lg font-semibold text-black cursor-auto uppercase">
-            //                         Psíquico
-            //                     </a>
-            //                 </div>
-            //             </div>
-            //         </div>
-        )
-    }
 
     <style>
         .normal {
