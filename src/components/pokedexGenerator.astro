@@ -1,5 +1,55 @@
 ---
-import { pokemonList } from "../consts/pokemonList";
+import { getG1 } from "../consts/pokemonList";
+import { getG2 } from "../consts/pokemonList";
+import { getG3 } from "../consts/pokemonList";
+import { getG4 } from "../consts/pokemonList";
+import { getG5 } from "../consts/pokemonList";
+import { getG6 } from "../consts/pokemonList";
+import { getG7 } from "../consts/pokemonList";
+import { getG8 } from "../consts/pokemonList";
+import { getG9 } from "../consts/pokemonList";
+
+let listG1 = await getG1();
+let genSelected = listG1;
+
+export async function selectGen1() {
+    console.log("Gen1");
+    let listG1 = await getG1();
+    let genSelected = listG1;
+}
+export async function selectGen2() {
+    console.log("Gen2");
+    let listG2 = await getG2();
+    let genSelected = listG2;
+}
+export async function selectGen3() {
+    let listG3 = await getG3();
+    let genSelected = listG3;
+}
+export async function selectGen4() {
+    let listG4 = await getG4();
+    let genSelected = listG4;
+}
+export async function selectGen5() {
+    let listG5 = await getG5();
+    let genSelected = listG5;
+}
+export async function selectGen6() {
+    let listG6 = await getG6();
+    let genSelected = listG6;
+}
+export async function selectGen7() {
+    let listG7 = await getG7();
+    let genSelected = listG7;
+}
+export async function selectGen8() {
+    let listG8 = await getG8();
+    let genSelected = listG8;
+}
+export async function selectGen9() {
+    let listG9 = await getG9();
+    let genSelected = listG9;
+}
 ---
 
 <section
@@ -7,7 +57,7 @@ import { pokemonList } from "../consts/pokemonList";
                 md:grid-cols-2 gap-y-14 my-10 jutify-center items-center"
 >
     {
-        pokemonList.map(({ id, name, types }) => (
+        genSelected.map(({ id, name, types }) => (
             <article class="w-72 h-80 rounded-2xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 cursor-pointer flex flex-col mx-auto">
                 {types[0].type.name == "normal" && (
                     <header class="z-10 normal rounded-t-2xl">

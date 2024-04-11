@@ -1,3 +1,27 @@
+---
+import { selectGen1 } from "./pokedexGenerator.astro";
+import { selectGen2 } from "./pokedexGenerator.astro";
+import { selectGen3 } from "./pokedexGenerator.astro";
+import { selectGen4 } from "./pokedexGenerator.astro";
+import { selectGen5 } from "./pokedexGenerator.astro";
+import { selectGen6 } from "./pokedexGenerator.astro";
+import { selectGen7 } from "./pokedexGenerator.astro";
+import { selectGen8 } from "./pokedexGenerator.astro";
+import { selectGen9 } from "./pokedexGenerator.astro";
+---
+
+<script>
+    const btnGen1 = document.getElementById("btnG1");
+    const btnGen2 = document.getElementById("btnG2");
+
+    btnGen1.addEventListener("click", () => {
+        console.log("Gen 1");
+    });
+    btnGen2.addEventListener("click", () => {
+        console.log("Gen 2");
+    });
+</script>
+
 <header
     style="backdrop-filter: blur(20px);"
     class="text-gray-600 body-font sticky top-0 z-50 bg-white bg-clip-padding bg-opacity-40"
@@ -27,10 +51,98 @@
         <nav
             class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
         >
-            <a class="mr-5 hover:text-gray-900">First Link</a>
-            <a class="mr-5 hover:text-gray-900">Second Link</a>
-            <a class="mr-5 hover:text-gray-900">Third Link</a>
-            <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+            <button
+                class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+            >
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+                    alt="Generación 1"
+                    class="w-8 h-auto mx-auto hidden md:flex"
+                    id="btnG1"
+                />
+                Gen 1
+            </button>
+            <button
+                class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+            >
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+                    alt="Generación 1"
+                    class="w-8 h-auto mx-auto hidden md:flex"
+                    id="btnG2"
+                />
+                Gen 2
+            </button>
+            <button
+                class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+            >
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+                    alt="Generación 1"
+                    class="w-8 h-auto mx-auto hidden md:flex"
+                />
+                Gen 3</button
+            >
+            <button
+                class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+            >
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+                    alt="Generación 1"
+                    class="w-8 h-auto mx-auto hidden md:flex"
+                />
+                Gen 4</button
+            >
+            <button
+                class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+            >
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+                    alt="Generación 1"
+                    class="w-8 h-auto mx-auto hidden md:flex"
+                />
+                Gen 5</button
+            >
+            <button
+                class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+            >
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+                    alt="Generación 1"
+                    class="w-8 h-auto mx-auto hidden md:flex"
+                />
+                Gen 6</button
+            >
+            <button
+                class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+            >
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+                    alt="Generación 1"
+                    class="w-8 h-auto mx-auto hidden md:flex"
+                />
+                Gen 7</button
+            >
+            <button
+                class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+            >
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+                    alt="Generación 1"
+                    class="w-8 h-auto mx-auto hidden md:flex"
+                />
+                Gen 8</button
+            >
+            <button
+                class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+            >
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+                    alt="Generación 1"
+                    class="w-8 h-auto mx-auto hidden md:flex"
+                />
+                Gen 9</button
+            >
         </nav>
         <button
             class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
