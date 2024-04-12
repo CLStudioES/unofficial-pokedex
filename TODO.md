@@ -1,0 +1,3 @@
+- []    Buttons action cambio entre generaciones
+- []    Load de 20 imágenes y cargar siguientes
+- []    Revisión deiseño y optimización cards
