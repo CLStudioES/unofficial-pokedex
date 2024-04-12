@@ -1,24 +1,54 @@
 ---
-import { selectGen1 } from "./pokedexGenerator.astro";
-import { selectGen2 } from "./pokedexGenerator.astro";
-import { selectGen3 } from "./pokedexGenerator.astro";
-import { selectGen4 } from "./pokedexGenerator.astro";
-import { selectGen5 } from "./pokedexGenerator.astro";
-import { selectGen6 } from "./pokedexGenerator.astro";
-import { selectGen7 } from "./pokedexGenerator.astro";
-import { selectGen8 } from "./pokedexGenerator.astro";
-import { selectGen9 } from "./pokedexGenerator.astro";
+
 ---
 
 <script>
+    import { selectGen1 } from "./pokedexGenerator.astro";
+    import { selectGen2 } from "./pokedexGenerator.astro";
+    import { selectGen3 } from "./pokedexGenerator.astro";
+    import { selectGen4 } from "./pokedexGenerator.astro";
+    import { selectGen5 } from "./pokedexGenerator.astro";
+    import { selectGen6 } from "./pokedexGenerator.astro";
+    import { selectGen7 } from "./pokedexGenerator.astro";
+    import { selectGen8 } from "./pokedexGenerator.astro";
+    import { selectGen9 } from "./pokedexGenerator.astro";
+
     const btnGen1 = document.getElementById("btnG1");
     const btnGen2 = document.getElementById("btnG2");
+    const btnGen3 = document.getElementById("btnG3");
+    const btnGen4 = document.getElementById("btnG4");
+    const btnGen5 = document.getElementById("btnG5");
+    const btnGen6 = document.getElementById("btnG6");
+    const btnGen7 = document.getElementById("btnG7");
+    const btnGen8 = document.getElementById("btnG8");
+    const btnGen9 = document.getElementById("btnG9");
 
     btnGen1.addEventListener("click", () => {
-        console.log("Gen 1");
+        selectGen1();
     });
     btnGen2.addEventListener("click", () => {
-        console.log("Gen 2");
+        selectGen2();
+    });
+    btnGen3.addEventListener("click", () => {
+        selectGen3();
+    });
+    btnGen4.addEventListener("click", () => {
+        selectGen4();
+    });
+    btnGen5.addEventListener("click", () => {
+        selectGen5();
+    });
+    btnGen6.addEventListener("click", () => {
+        selectGen6();
+    });
+    btnGen7.addEventListener("click", () => {
+        selectGen7();
+    });
+    btnGen8.addEventListener("click", () => {
+        selectGen8();
+    });
+    btnGen9.addEventListener("click", () => {
+        selectGen9();
     });
 </script>
 
@@ -52,28 +82,29 @@ import { selectGen9 } from "./pokedexGenerator.astro";
             class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
         >
             <button
+                id="btnG1"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
                     alt="Generación 1"
                     class="w-8 h-auto mx-auto hidden md:flex"
-                    id="btnG1"
                 />
                 Gen 1
             </button>
             <button
+                id="btnG2"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
                     alt="Generación 1"
                     class="w-8 h-auto mx-auto hidden md:flex"
-                    id="btnG2"
                 />
                 Gen 2
             </button>
             <button
+                id="btnG3"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
                 <img
@@ -84,6 +115,7 @@ import { selectGen9 } from "./pokedexGenerator.astro";
                 Gen 3</button
             >
             <button
+                id="btnG4"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
                 <img
@@ -94,6 +126,7 @@ import { selectGen9 } from "./pokedexGenerator.astro";
                 Gen 4</button
             >
             <button
+                id="btnG5"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
                 <img
@@ -104,6 +137,7 @@ import { selectGen9 } from "./pokedexGenerator.astro";
                 Gen 5</button
             >
             <button
+                id="btnG6"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
                 <img
@@ -114,6 +148,7 @@ import { selectGen9 } from "./pokedexGenerator.astro";
                 Gen 6</button
             >
             <button
+                id="btnG7"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
                 <img
@@ -124,6 +159,7 @@ import { selectGen9 } from "./pokedexGenerator.astro";
                 Gen 7</button
             >
             <button
+                id="btnG8"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
                 <img
@@ -134,6 +170,7 @@ import { selectGen9 } from "./pokedexGenerator.astro";
                 Gen 8</button
             >
             <button
+                id="btnG9"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
                 <img

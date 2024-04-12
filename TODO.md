@@ -1,3 +1,4 @@
 - []    Buttons action cambio entre generaciones
+- []    Añadir spinner para la carga
 - []    Load de 20 imágenes y cargar siguientes
 - []    Revisión deiseño y optimización cards
