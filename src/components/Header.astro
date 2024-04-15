@@ -1,8 +1,10 @@
 ---
-import { changePokedesGen } from "../layouts/Layout.astro";
+
 ---
 
 <script>
+    import { changePokedexGen } from "../layouts/Layout.astro";
+
     const btnGen1 = document.getElementById("btnG1");
     const btnGen2 = document.getElementById("btnG2");
     const btnGen3 = document.getElementById("btnG3");
@@ -14,31 +16,31 @@ import { changePokedesGen } from "../layouts/Layout.astro";
     const btnGen9 = document.getElementById("btnG9");
 
     btnGen1.addEventListener("click", () => {
-        changePokedesGen(1);
+        changePokedexGen("pokedexG1");
     });
     btnGen2.addEventListener("click", () => {
-        changePokedesGen(2);
+        changePokedexGen("pokedexG2");
     });
     btnGen3.addEventListener("click", () => {
-        changePokedesGen(3);
+        changePokedexGen("pokedexG3");
     });
     btnGen4.addEventListener("click", () => {
-        changePokedesGen(4);
+        changePokedexGen("pokedexG4");
     });
     btnGen5.addEventListener("click", () => {
-        changePokedesGen(5);
+        changePokedexGen("pokedexG5");
     });
     btnGen6.addEventListener("click", () => {
-        changePokedesGen(6);
+        changePokedexGen("pokedexG6");
     });
     btnGen7.addEventListener("click", () => {
-        changePokedesGen(7);
+        changePokedexGen("pokedexG7");
     });
     btnGen8.addEventListener("click", () => {
-        changePokedesGen(8);
+        changePokedexGen("pokedexG8");
     });
     btnGen9.addEventListener("click", () => {
-        changePokedesGen(9);
+        changePokedexGen("pokedexG9");
     });
 </script>
 
