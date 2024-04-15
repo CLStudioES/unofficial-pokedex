@@ -2,48 +2,6 @@
 
 ---
 
-<script>
-    import { changePokedexGen } from "../layouts/Layout.astro";
-
-    const btnGen1 = document.getElementById("btnG1");
-    const btnGen2 = document.getElementById("btnG2");
-    const btnGen3 = document.getElementById("btnG3");
-    const btnGen4 = document.getElementById("btnG4");
-    const btnGen5 = document.getElementById("btnG5");
-    const btnGen6 = document.getElementById("btnG6");
-    const btnGen7 = document.getElementById("btnG7");
-    const btnGen8 = document.getElementById("btnG8");
-    const btnGen9 = document.getElementById("btnG9");
-
-    btnGen1.addEventListener("click", () => {
-        changePokedexGen("pokedexG1");
-    });
-    btnGen2.addEventListener("click", () => {
-        changePokedexGen("pokedexG2");
-    });
-    btnGen3.addEventListener("click", () => {
-        changePokedexGen("pokedexG3");
-    });
-    btnGen4.addEventListener("click", () => {
-        changePokedexGen("pokedexG4");
-    });
-    btnGen5.addEventListener("click", () => {
-        changePokedexGen("pokedexG5");
-    });
-    btnGen6.addEventListener("click", () => {
-        changePokedexGen("pokedexG6");
-    });
-    btnGen7.addEventListener("click", () => {
-        changePokedexGen("pokedexG7");
-    });
-    btnGen8.addEventListener("click", () => {
-        changePokedexGen("pokedexG8");
-    });
-    btnGen9.addEventListener("click", () => {
-        changePokedexGen("pokedexG9");
-    });
-</script>
-
 <header
     style="backdrop-filter: blur(20px);"
     class="text-gray-600 body-font sticky top-0 z-50 bg-white bg-clip-padding bg-opacity-40"
@@ -73,7 +31,8 @@
         <nav
             class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
         >
-            <button
+            <a
+                href="/generation1"
                 id="btnG1"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
@@ -83,8 +42,9 @@
                     class="w-8 h-auto mx-auto hidden md:flex"
                 />
                 Gen 1
-            </button>
-            <button
+            </a>
+            <a
+                href="/generation2"
                 id="btnG2"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
@@ -94,8 +54,9 @@
                     class="w-8 h-auto mx-auto hidden md:flex"
                 />
                 Gen 2
-            </button>
-            <button
+            </a>
+            <a
+                href="/generation3"
                 id="btnG3"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
@@ -104,9 +65,10 @@
                     alt="Generación 1"
                     class="w-8 h-auto mx-auto hidden md:flex"
                 />
-                Gen 3</button
+                Gen 3</a
             >
-            <button
+            <a
+                href="/generation4"
                 id="btnG4"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
@@ -115,9 +77,10 @@
                     alt="Generación 1"
                     class="w-8 h-auto mx-auto hidden md:flex"
                 />
-                Gen 4</button
+                Gen 4</a
             >
-            <button
+            <a
+                href="/generation5"
                 id="btnG5"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
@@ -126,9 +89,10 @@
                     alt="Generación 1"
                     class="w-8 h-auto mx-auto hidden md:flex"
                 />
-                Gen 5</button
+                Gen 5</a
             >
-            <button
+            <a
+                href="/generation6"
                 id="btnG6"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
@@ -137,9 +101,10 @@
                     alt="Generación 1"
                     class="w-8 h-auto mx-auto hidden md:flex"
                 />
-                Gen 6</button
+                Gen 6</a
             >
-            <button
+            <a
+                href="/generation7"
                 id="btnG7"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
@@ -148,9 +113,10 @@
                     alt="Generación 1"
                     class="w-8 h-auto mx-auto hidden md:flex"
                 />
-                Gen 7</button
+                Gen 7</a
             >
-            <button
+            <a
+                href="/generation8"
                 id="btnG8"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
@@ -159,9 +125,10 @@
                     alt="Generación 1"
                     class="w-8 h-auto mx-auto hidden md:flex"
                 />
-                Gen 8</button
+                Gen 8</a
             >
-            <button
+            <a
+                href="/generation9"
                 id="btnG9"
                 class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
             >
@@ -170,7 +137,7 @@
                     alt="Generación 1"
                     class="w-8 h-auto mx-auto hidden md:flex"
                 />
-                Gen 9</button
+                Gen 9</a
             >
         </nav>
         <button

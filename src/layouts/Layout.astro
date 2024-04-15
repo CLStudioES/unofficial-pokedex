@@ -1,31 +1,11 @@
 ---
 import Header from "../components/Header.astro";
-import PokedexGeneratorG1 from "../components/pokedexGeneratorG1.astro";
-import PokedexGeneratorG2 from "../components/pokedexGeneratorG2.astro";
-import PokedexGeneratorG3 from "../components/pokedexGeneratorG3.astro";
-import PokedexGeneratorG4 from "../components/pokedexGeneratorG4.astro";
-import PokedexGeneratorG5 from "../components/pokedexGeneratorG5.astro";
-import PokedexGeneratorG6 from "../components/pokedexGeneratorG6.astro";
-import PokedexGeneratorG7 from "../components/pokedexGeneratorG7.astro";
-import PokedexGeneratorG8 from "../components/pokedexGeneratorG8.astro";
-import PokedexGeneratorG9 from "../components/pokedexGeneratorG9.astro";
 
 interface Props {
 	title: string;
-	currentGeneration: string;
 }
 
 const { title } = Astro.props;
-
-let { currentGeneration } = Astro.props;
-
-if (currentGeneration) {
-	console.log("Inicialización de la pokédex, cargando: " + currentGeneration);
-}
-
-export function changePokedexGen(selectedGeneration) {
-	console.log(selectedGeneration);
-}
 ---
 
 <html lang="es">
@@ -40,15 +20,6 @@ export function changePokedexGen(selectedGeneration) {
 	<body>
 		<Header />
 		<slot />
-		{currentGeneration === "pokedexG1" && <PokedexGeneratorG1 />}
-		{currentGeneration === "pokedexG2" && <PokedexGeneratorG2 />}
-		{currentGeneration === "pokedexG3" && <PokedexGeneratorG3 />}
-		{currentGeneration === "pokedexG4" && <PokedexGeneratorG4 />}
-		{currentGeneration === "pokedexG5" && <PokedexGeneratorG5 />}
-		{currentGeneration === "pokedexG6" && <PokedexGeneratorG6 />}
-		{currentGeneration === "pokedexG7" && <PokedexGeneratorG7 />}
-		{currentGeneration === "pokedexG8" && <PokedexGeneratorG8 />}
-		{currentGeneration === "pokedexG9" && <PokedexGeneratorG9 />}
 	</body>
 </html>
 <style is:global>
