@@ -1,5 +1,5 @@
 ---
-
+import { changePokedesGen } from "../layouts/Layout.astro";
 ---
 
 <script>
@@ -13,15 +13,33 @@
     const btnGen8 = document.getElementById("btnG8");
     const btnGen9 = document.getElementById("btnG9");
 
-    btnGen1.addEventListener("click", () => {});
-    btnGen2.addEventListener("click", () => {});
-    btnGen3.addEventListener("click", () => {});
-    btnGen4.addEventListener("click", () => {});
-    btnGen5.addEventListener("click", () => {});
-    btnGen6.addEventListener("click", () => {});
-    btnGen7.addEventListener("click", () => {});
-    btnGen8.addEventListener("click", () => {});
-    btnGen9.addEventListener("click", () => {});
+    btnGen1.addEventListener("click", () => {
+        changePokedesGen(1);
+    });
+    btnGen2.addEventListener("click", () => {
+        changePokedesGen(2);
+    });
+    btnGen3.addEventListener("click", () => {
+        changePokedesGen(3);
+    });
+    btnGen4.addEventListener("click", () => {
+        changePokedesGen(4);
+    });
+    btnGen5.addEventListener("click", () => {
+        changePokedesGen(5);
+    });
+    btnGen6.addEventListener("click", () => {
+        changePokedesGen(6);
+    });
+    btnGen7.addEventListener("click", () => {
+        changePokedesGen(7);
+    });
+    btnGen8.addEventListener("click", () => {
+        changePokedesGen(8);
+    });
+    btnGen9.addEventListener("click", () => {
+        changePokedesGen(9);
+    });
 </script>
 
 <header

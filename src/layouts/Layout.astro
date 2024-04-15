@@ -1,16 +1,23 @@
 ---
-import Header from "../components/Header.astro";
-import PokedexGenerator from "../components/pokedexGeneratorG1.astro";
+import PokedexGeneratorG1 from "../components/pokedexGeneratorG1.astro";
 import PokedexGeneratorG2 from "../components/pokedexGeneratorG2.astro";
+import PokedexGeneratorG3 from "../components/pokedexGeneratorG3.astro";
+import PokedexGeneratorG4 from "../components/pokedexGeneratorG4.astro";
+import PokedexGeneratorG5 from "../components/pokedexGeneratorG5.astro";
+import PokedexGeneratorG6 from "../components/pokedexGeneratorG6.astro";
+import PokedexGeneratorG7 from "../components/pokedexGeneratorG7.astro";
+import PokedexGeneratorG8 from "../components/pokedexGeneratorG8.astro";
+import PokedexGeneratorG9 from "../components/pokedexGeneratorG9.astro";
 
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+let currentGeneration = "pokedexG1";
 ---
 
-<!doctype html>
+<script></script>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
@@ -21,9 +28,162 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header />
-		<PokedexGenerator />
-		<!-- <PokedexGeneratorG2 /> -->
+		<header
+			style="backdrop-filter: blur(20px);"
+			class="text-gray-600 body-font sticky top-0 z-50 bg-white bg-clip-padding bg-opacity-40"
+		>
+			<div
+				class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+			>
+				<a
+					class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+						viewBox="0 0 24 24"
+					>
+						<path
+							d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+						></path>
+					</svg>
+					<span class="ml-3 text-xl">Tailblocks</span>
+				</a>
+				<nav
+					class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+				>
+					<button
+						id="btnG1"
+						class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+					>
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+							alt="Generación 1"
+							class="w-8 h-auto mx-auto hidden md:flex"
+						/>
+						Gen 1
+					</button>
+					<button
+						id="btnG2"
+						class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+					>
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+							alt="Generación 1"
+							class="w-8 h-auto mx-auto hidden md:flex"
+						/>
+						Gen 2
+					</button>
+					<button
+						id="btnG3"
+						class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+					>
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+							alt="Generación 1"
+							class="w-8 h-auto mx-auto hidden md:flex"
+						/>
+						Gen 3</button
+					>
+					<button
+						id="btnG4"
+						class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+					>
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+							alt="Generación 1"
+							class="w-8 h-auto mx-auto hidden md:flex"
+						/>
+						Gen 4</button
+					>
+					<button
+						id="btnG5"
+						class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+					>
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+							alt="Generación 1"
+							class="w-8 h-auto mx-auto hidden md:flex"
+						/>
+						Gen 5</button
+					>
+					<button
+						id="btnG6"
+						class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+					>
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+							alt="Generación 1"
+							class="w-8 h-auto mx-auto hidden md:flex"
+						/>
+						Gen 6</button
+					>
+					<button
+						id="btnG7"
+						class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+					>
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+							alt="Generación 1"
+							class="w-8 h-auto mx-auto hidden md:flex"
+						/>
+						Gen 7</button
+					>
+					<button
+						id="btnG8"
+						class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+					>
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+							alt="Generación 1"
+							class="w-8 h-auto mx-auto hidden md:flex"
+						/>
+						Gen 8</button
+					>
+					<button
+						id="btnG9"
+						class="mr-5 hover:text-gray-900 flex flex-col hover:scale-110 transition-all duration-150"
+					>
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+							alt="Generación 1"
+							class="w-8 h-auto mx-auto hidden md:flex"
+						/>
+						Gen 9</button
+					>
+				</nav>
+				<button
+					class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+					>Button
+					<svg
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						class="w-4 h-4 ml-1"
+						viewBox="0 0 24 24"
+					>
+						<path d="M5 12h14M12 5l7 7-7 7"></path>
+					</svg>
+				</button>
+			</div>
+		</header>
+		<slot />
+		{currentGeneration === "pokedexG1" && <PokedexGeneratorG1 />}
+		{currentGeneration === "pokedexG2" && <PokedexGeneratorG2 />}
+		{currentGeneration === "pokedexG3" && <PokedexGeneratorG3 />}
+		{currentGeneration === "pokedexG4" && <PokedexGeneratorG4 />}
+		{currentGeneration === "pokedexG5" && <PokedexGeneratorG5 />}
+		{currentGeneration === "pokedexG6" && <PokedexGeneratorG6 />}
+		{currentGeneration === "pokedexG7" && <PokedexGeneratorG7 />}
+		{currentGeneration === "pokedexG8" && <PokedexGeneratorG8 />}
+		{currentGeneration === "pokedexG9" && <PokedexGeneratorG9 />}
 		<slot />
 	</body>
 </html>
