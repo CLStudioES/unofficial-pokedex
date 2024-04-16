@@ -1,9 +1,9 @@
 ---
 import { getG1 } from "../consts/pokemonList";
 import Layout from "../layouts/Layout.astro";
-import Loader from "../components/Loader.astro";
 
 let listG1 = await getG1();
+let maxPokemon = 151;
 ---
 
 <Layout title="Bienvenido a la Pokédex no oficial">
@@ -13,7 +13,7 @@ let listG1 = await getG1();
                 md:grid-cols-2 gap-y-14 my-10 jutify-center items-center"
         >
             {
-                listG1.map(({ id, name, types }) => (
+                listG1.slice(0, maxPokemon).map(({ id, name, types }) => (
                     <article class="w-72 h-80 rounded-2xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 cursor-pointer flex flex-col mx-auto">
                         {types[0].type.name == "normal" && (
                             <header class="z-10 normal rounded-t-2xl">
@@ -602,5 +602,11 @@ let listG1 = await getG1();
                 ))
             }
         </section>
+        <div class="flex my-8 mx-auto justify-center items-center">
+            <button
+                class="mx-auto bg-black px-6 py-2 text-white rounded-2xl loadPokemons"
+                >Cargar más pokemon</button
+            >
+        </div>
     </main>
 </Layout>
