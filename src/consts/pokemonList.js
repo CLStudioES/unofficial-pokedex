@@ -1,3 +1,5 @@
+import Loader from "../components/Loader.astro";
+
 let response;
 let data;
 let pokemonListG1 = [];
