@@ -1,9 +1,9 @@
 ---
-import { getG7 } from "../consts/pokemonList";
-import Layout from "../layouts/Layout.astro";
-import PokemonCard from "../components/PokemonCard.astro";
+import { getG9 } from "../../consts/pokemonList";
+import Layout from "../../layouts/Layout.astro";
+import PokemonCard from "../../components/PokemonCard.astro";
 
-let listG7 = await getG7();
+let listG9 = await getG9();
 let maxPokemon = 20;
 ---
 
@@ -13,7 +13,7 @@ let maxPokemon = 20;
             class="container h-auto mx-auto grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4
                 md:grid-cols-2 gap-y-14 my-10 jutify-center items-center"
         >
-            {(<PokemonCard pokemonList={listG7} maxPokemon={maxPokemon} />)}
+            {(<PokemonCard pokemonList={listG9} maxPokemon={maxPokemon} />)}
         </section>
     </main>
 </Layout>
