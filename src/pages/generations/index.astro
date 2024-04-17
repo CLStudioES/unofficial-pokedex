@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import RegionCard from "../../components/RegionCard.astro";
+
+const title = "Unofficial Pokédex | Generations";
+---
+
+<Layout title={title}>
+    <main>
+        <section
+            class="container h-auto mx-auto grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3
+                md:grid-cols-2 gap-y-14 my-10 jutify-center items-center"
+        >
+            <RegionCard />
+        </section>
+    </main>
+</Layout>

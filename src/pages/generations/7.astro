@@ -3,11 +3,12 @@ import { getG7 } from "../../consts/pokemonList";
 import Layout from "../../layouts/Layout.astro";
 import PokemonCard from "../../components/PokemonCard.astro";
 
+const title = "Unofficial Pokédex | Gen7";
 let listG7 = await getG7();
 let maxPokemon = 20;
 ---
 
-<Layout title="Bienvenido a la Pokédex no oficial">
+<Layout title={title}>
     <main>
         <section
             class="container h-auto mx-auto grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4

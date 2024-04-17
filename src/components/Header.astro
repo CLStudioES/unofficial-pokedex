@@ -9,32 +9,8 @@ const normalizedPathName =
 const paginasPrincipales = [
     {
         id: 1,
-        name: "Generation 1",
-        href: "/generations/1",
-        active: normalizedPathName.startsWith("/generations"),
-    },
-    {
-        id: 2,
-        name: "Generation 2",
-        href: "/generations/2",
-        active: normalizedPathName.startsWith("/generations"),
-    },
-    {
-        id: 3,
-        name: "Generation 3",
-        href: "/generations/3",
-        active: normalizedPathName.startsWith("/generations"),
-    },
-    {
-        id: 4,
-        name: "Generation 4",
-        href: "/generations/4",
-        active: normalizedPathName.startsWith("/generations"),
-    },
-    {
-        id: 5,
-        name: "Generation 5",
-        href: "/generations/5",
+        name: "Generations",
+        href: "/generations",
         active: normalizedPathName.startsWith("/generations"),
     },
 ].map((page) => ({
@@ -44,32 +20,8 @@ const paginasPrincipales = [
 const paginasSecundarias = [
     {
         id: 6,
-        name: "Generation 6",
-        href: "/generations/6",
-        active: normalizedPathName.startsWith("/generations"),
-    },
-    {
-        id: 7,
-        name: "Generation 7",
-        href: "/generations/7",
-        active: normalizedPathName.startsWith("/generations"),
-    },
-    {
-        id: 8,
-        name: "Generation 8",
-        href: "/generations/8",
-        active: normalizedPathName.startsWith("/generations"),
-    },
-    {
-        id: 9,
-        name: "Generation 9",
-        href: "/generations/9",
-        active: normalizedPathName.startsWith("/generations"),
-    },
-    {
-        id: 10,
-        name: "Generation 10",
-        href: "/generations/1",
+        name: "Generations",
+        href: "/generations",
         active: normalizedPathName.startsWith("/generations"),
     },
 ].map((page) => ({
@@ -80,7 +32,9 @@ const paginasSecundarias = [
 
 <header class="text-gray-600 w-full mx-auto justify-center items-center">
     <div class="mx-auto flex flex-wrap p-5 justify-center items-center">
-        <nav class="flex flex-wrap items-center justify-between text-base">
+        <nav
+            class="flex flex-wrap flex-row items-center justify-between text-base"
+        >
             {
                 paginasPrincipales.map(({ name, href }, key) => (
                     <a
