@@ -1,0 +1,593 @@
+---
+const { pokemonList, maxPokemon } = Astro.props;
+---
+
+{
+    pokemonList.map((pokemon) => (
+        <article class="w-72 h-80 rounded-2xl shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-200 cursor-pointer flex flex-col mx-auto">
+            {pokemon.types[0].type.name == "normal" && (
+                <header class="z-10 normal rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "fire" && (
+                <header class="z-10 fire rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "water" && (
+                <header class="z-10 water rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "electric" && (
+                <header class="z-10 electric rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "grass" && (
+                <header class="z-10 grass rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "ice" && (
+                <header class="z-10 ice rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "fighting" && (
+                <header class="z-10 fighting rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "poison" && (
+                <header class="z-10 poison rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "ground" && (
+                <header class="z-10 ground rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "flying" && (
+                <header class="z-10 flying rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "psychic" && (
+                <header class="z-10 psychic rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "bug" && (
+                <header class="z-10 bug rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "rock" && (
+                <header class="z-10 rock rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "ghost" && (
+                <header class="z-10 ghost rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "dragon" && (
+                <header class="z-10 dragon rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "dark" && (
+                <header class="z-10 dark rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "steel" && (
+                <header class="z-10 steel rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            {pokemon.types[0].type.name == "fairy" && (
+                <header class="z-10 fairy rounded-t-2xl">
+                    <div class="px-4 py-3 w-72 ">
+                        <p class="text-white mr-3 uppercase">{`Nº ${pokemon.id.toString().padStart(4, 0)}`}</p>
+                    </div>
+                    <div
+                        style="backdrop-filter: blur(20px);"
+                        class="bg-white bg-clip-padding bg-opacity-40 shadow-2xl h-40 w-40 rounded-full mx-auto my-auto border border-gray-300 -mb-8 z-100"
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id.toString()}.png`}
+                            alt="Pokémon"
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                </header>
+            )}
+            <div class="justify-center items-center mx-auto flex flex-col py-3 mt-7 w-72">
+                <p class="text-2xl font-bold text-black truncate block capitalize mb-1">
+                    {`${pokemon.name}`}
+                </p>
+                <div class="flex items-center">
+                    {pokemon.types[0].type.name == "normal" && (
+                        <div class="normal px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Normal
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "fire" && (
+                        <div class="fire px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Fuego
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "water" && (
+                        <div class="water px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Agua
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "electric" && (
+                        <div class="electric px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Eléctrico
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "grass" && (
+                        <div class="grass px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Planta
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "ice" && (
+                        <div class="ice px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Hielo
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "fighting" && (
+                        <div class="fighting px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Lucha
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "poison" && (
+                        <div class="poison px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Veneno
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "ground" && (
+                        <div class="ground px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Tierra
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "flying" && (
+                        <div class="flying px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Volador
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "psychic" && (
+                        <div class="psychic px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Psíquico
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "bug" && (
+                        <div class="bug px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Bicho
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "rock" && (
+                        <div class="rock px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Roca
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "ghost" && (
+                        <div class="ghost px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Fantasma
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "dragon" && (
+                        <div class="dragon px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Dragón
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "dark" && (
+                        <div class="dark px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Siniestro
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "steel" && (
+                        <div class="steel px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Acero
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types[0].type.name == "fairy" && (
+                        <div class="fairy px-4 py-1 mt-2 rounded-2xl">
+                            <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                Hada
+                            </a>
+                        </div>
+                    )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "normal" && (
+                            <div class="normal px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Normal
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "fire" && (
+                            <div class="fire px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Fuego
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "water" && (
+                            <div class="water px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Agua
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "electric" && (
+                            <div class="electric px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Eléctrico
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "grass" && (
+                            <div class="grass px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Planta
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "ice" && (
+                            <div class="ice px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Hielo
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "fighting" && (
+                            <div class="fighting px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Lucha
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "poison" && (
+                            <div class="poison px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Veneno
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "ground" && (
+                            <div class="ground px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Tierra
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "flying" && (
+                            <div class="flying px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Volador
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "psychic" && (
+                            <div class="psychic px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Psíquico
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "bug" && (
+                            <div class="bug px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Bicho
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "rock" && (
+                            <div class="rock px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Roca
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "ghost" && (
+                            <div class="ghost px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Fantasma
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "dragon" && (
+                            <div class="dragon px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Dragón
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "dark" && (
+                            <div class="dark px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Siniestro
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "steel" && (
+                            <div class="steel px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Acero
+                                </a>
+                            </div>
+                        )}
+                    {pokemon.types.length > 1 &&
+                        pokemon.types[1].type.name == "fairy" && (
+                            <div class="fairy px-4 py-1 mt-2 rounded-2xl ml-2">
+                                <a class="text-lg font-semibold text-black cursor-auto capitalize ">
+                                    Hada
+                                </a>
+                            </div>
+                        )}
+                </div>
+            </div>
+        </article>
+    ))
+}
