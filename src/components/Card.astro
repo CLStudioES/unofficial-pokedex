@@ -1,0 +1,16 @@
+---
+// Card.astro
+export interface Props {
+  name: string;
+  image: string;
+  type: string[];
+}
+
+const { name, image, type } = Astro.props;
+---
+
+<button class="w-full h-full bg-white rounded-lg shadow-md p-4 flex flex-col">
+  <img src={image} alt={name} class="w-full h-48 object-contain mb-4" />
+  <h2 class="text-xl font-bold mb-2">{name}</h2>
+  <p class="text-gray-600 flex-grow">Type: {type.join(", ")}</p>
+</button>

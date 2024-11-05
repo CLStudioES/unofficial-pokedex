@@ -1,100 +1,66 @@
----
-// remote last slash from pathname
-const { pathname } = Astro.url;
-const normalizedPathName =
-    pathname.length > 1 && pathname.endsWith("/")
-        ? pathname.slice(0, -1)
-        : pathname;
-
-const paginasPrincipales = [
-    {
-        id: 1,
-        name: "Generations",
-        href: "/generations",
-        active: normalizedPathName.startsWith("/generations"),
-    },
-].map((page) => ({
-    ...page,
-    active: page.active ?? normalizedPathName === page.href,
-}));
-const paginasSecundarias = [
-    {
-        id: 6,
-        name: "Generations",
-        href: "/generations",
-        active: normalizedPathName.startsWith("/generations"),
-    },
-].map((page) => ({
-    ...page,
-    active: page.active ?? normalizedPathName === page.href,
-}));
----
-
-<header class="text-gray-600 w-full mx-auto justify-center items-center">
-    <div class="mx-auto flex flex-wrap p-5 justify-center items-center">
-        <nav
-            class="flex flex-wrap flex-row items-center justify-between text-base"
-        >
-            {
-                paginasPrincipales.map(({ name, href }, key) => (
-                    <a
-                        href={href}
-                        id={`nav-link-${key}`}
-                        class:list={[
-                            "group mr-5 hover:text-gray-900 flex flex-row items-center justify-center",
-                        ]}
-                    >
-                        <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
-                            alt="Generación 1"
-                            class="w-3 h-3 hidden group-hover:flex group-hover:animate-slide-in-right duration-300 mr-2 transition-all my-auto"
-                        />
-                        {name}
-                    </a>
-                ))
-            }
-        </nav>
-        <a
-            href="/"
-            class="hover:scale-110 transition-all duration-200 flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0 px-2"
-        >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-                viewBox="0 0 24 24"
-            >
-                <path
-                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-                ></path>
-            </svg>
-            <span class="ml-3 text-xl">Tailblocks</span>
-        </a>
-        <nav
-            class="flex flex-wrap flex-row items-center justify-between text-base"
-        >
-            {
-                paginasSecundarias.map(({ name, href }, key) => (
-                    <a
-                        href={href}
-                        id={`nav-link-${key}`}
-                        class:list={[
-                            "group mr-5 hover:text-gray-900 flex flex-row items-center justify-center",
-                        ]}
-                    >
-                        <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
-                            alt="Generación"
-                            class="w-3 h-3 hidden group-hover:flex group-hover:animate-slide-in-right duration-300 mr-2 transition-all my-auto"
-                        />
-                        {name}
-                    </a>
-                ))
-            }
-        </nav>
+<header class="bg-gray-800 text-white uppercase font-light tracking-wider">
+  <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center md:hidden w-full justify-center">
+      <img src="/img/logos/smallLogo.png" alt="Small Logo" class="h-8" />
+      <img src="/img/logos/bigLogo.png" alt="Big Logo" class="h-8" />
     </div>
+    <div class="hidden md:flex items-center space-x-2">
+      <img src="/img/logos/smallLogo.png" alt="Small Logo" class="h-8" />
+      <img src="/img/logos/bigLogo.png" alt="Big Logo" class="h-8" />
+    </div>
+
+    <div class="hidden md:flex space-x-4">
+      <a href="#" class="hover:text-gray-300 flex items-center group">
+        <img
+          src="/img/logos/smallLogo.png"
+          alt="Home"
+          class="h-5 w-5 mr-2 opacity-0 group-hover:opacity-100 group-hover:animate-fade-in-left transition-opacity duration-300 ease-in-out"
+        />
+        <span>Home</span>
+      </a>
+    </div>
+
+    <button id="menu-toggle" class="md:hidden">
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="hidden md:hidden">
+    <div class="flex flex-col items-center">
+      <a
+        href="#"
+        class="py-2 hover:text-gray-300 flex items-center justify-center w-full group"
+      >
+        <img
+          src="/img/logos/smallLogo.png"
+          alt="Home"
+          class="h-5 w-5 mr-2 opacity-0 group-hover:opacity-100 group-hover:animate-fade-in-left transition-opacity duration-300 ease-in-out"
+        />
+        <span>Home </span>
+      </a>
+    </div>
+
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
+  </div>
 </header>

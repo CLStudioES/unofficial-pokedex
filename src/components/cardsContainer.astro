@@ -1,0 +1,60 @@
+---
+import pokemons from "../data/pokemons.json";
+import Card from "./Card.astro";
+
+const ITEMS_PER_PAGE = 12;
+---
+
+<div class="container mx-auto px-4 py-8">
+  <div
+    id="pokemonGrid"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+  >
+    {
+      pokemons.map((pokemon, index) => (
+        <div
+          class="pokemon-card w-full h-full p-2"
+          data-index={index}
+          style={`display: ${index < ITEMS_PER_PAGE ? "block" : "none"};`}
+        >
+          <Card name={pokemon.name} image={pokemon.image} type={pokemon.type} />
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="mt-8 text-center">
+    <button
+      id="loadMore"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+      Cargar más Pokémon
+    </button>
+  </div>
+</div>
+
+<script define:vars={{ ITEMS_PER_PAGE, totalPokemons: pokemons.length }}>
+  const pokemonGrid = document.getElementById("pokemonGrid");
+  const loadMoreButton = document.getElementById("loadMore");
+  let currentPage = 1;
+
+  function loadPokemons() {
+    const start = currentPage * ITEMS_PER_PAGE;
+    const end = Math.min(start + ITEMS_PER_PAGE, totalPokemons);
+
+    for (let i = start; i < end; i++) {
+      const card = pokemonGrid.querySelector(`[data-index="${i}"]`);
+      if (card) {
+        card.style.display = "block";
+      }
+    }
+
+    currentPage++;
+
+    if (end >= totalPokemons) {
+      loadMoreButton.style.display = "none";
+    }
+  }
+
+  loadMoreButton.addEventListener("click", loadPokemons);
+</script>
